@@ -3,7 +3,7 @@
 cd ~
 
 apt update -y
-apt install -y git vim unzip curl python3 zsh wget jq telnet openssh-server
+apt install -y git vim unzip curl python3 zsh wget jq telnet 
 
 #install vim
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
