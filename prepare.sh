@@ -3,7 +3,7 @@
 cd ~
 
 sudo apt update -y
-sudo apt install -y git vim unzip curl terminator python3 zsh wget jq telnet 
+sudo apt install -y git vim unzip curl terminator python3 zsh wget jq telnet openssh-server
 
 #install vim
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -30,5 +30,9 @@ sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"agnoster\"/g' .zshrc
 echo 'alias ls="exa -hHBmgaFl --git"' >> ~/.zshrc
 echo set nu >> ~/.vim_runtime/my_configs.vim
 echo zsh >> ~/.bashrc
+
+sudo apt install -y docker.io
+sudo apt install -y docker-compose
+sudo usermod -aG docker $USER
 
 echo 'Done!'
