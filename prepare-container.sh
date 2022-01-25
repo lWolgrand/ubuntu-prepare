@@ -2,8 +2,8 @@
 
 cd ~
 
-sudo apt update -y
-sudo apt install -y git vim unzip curl python3 zsh wget jq telnet openssh-server
+apt update -y
+apt install -y git vim unzip curl python3 zsh wget jq telnet openssh-server
 
 #install vim
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -11,17 +11,16 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 #install micro
 curl https://getmic.ro | bash
-sudo mv micro /usr/bin
+mv micro /usr/bin
 
 #install exa (new LS)
 wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-sudo unzip -o -j exa-linux-x86_64-v0.10.0.zip "bin/exa" -d /usr/bin 
+unzip -o -j exa-linux-x86_64-v0.10.0.zip "bin/exa" -d /usr/bin 
 rm exa-linux-x86_64-v0.10.0.zip
 
 #install docker
-sudo apt install -y docker.io
-sudo apt install -y docker-compose
-sudo usermod -aG docker $USER
+apt install -y docker.io
+apt install -y docker-compose
 
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
