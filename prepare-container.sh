@@ -3,7 +3,7 @@
 cd ~
 
 sudo apt update -y
-sudo apt install -y git vim unzip curl terminator python3 zsh wget jq telnet openssh-server
+sudo apt install -y git vim unzip curl python3 zsh wget jq telnet openssh-server
 
 #install vim
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -12,11 +12,6 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 #install micro
 curl https://getmic.ro | bash
 sudo mv micro /usr/bin
-
-#install zsh/vim fonts
-git clone https://github.com/powerline/fonts.git
-./fonts/install.sh
-rm -rf fonts
 
 #install exa (new LS)
 wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
